@@ -16,7 +16,7 @@ output:
         <div class="progress-bar-container">
           <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
           </div>
-        </div>`
+        </div>
 params:
   event: Data and Algorithms for Public Policy - Lesson 2 "Open Data, Myths and Reality"
   slug: lesson2_opendata
@@ -57,11 +57,10 @@ Slides : `r paste0("https://gidoin.github.io/sciencespodata/", params$slug)`
 
 Sources : `r paste0("https://github.com/Gidoin/sciencespodata/", params$slug)`
 
-*The content of this presentation is partly inspired by other presentations made by Datactivist team*
-
 This production is freely reusable under the terms of the licence  [Creative Commons 4.0 BY-SA](https://creativecommons.org/licenses/by-sa/4.0/legalcode.fr).
 
-<BR>
+.center[*The content of this presentation is partly inspired by other presentations made by Datactivist team. I warmly thank them and notably [Joël Gombin](https://twitter.com/joelgombin) for his help.*]
+
 <BR>
 
 .center[<img src="./img/ccbysa.png" height="100"/>] 
@@ -87,7 +86,7 @@ This production is freely reusable under the terms of the licence  [Creative Com
 is a data Scientist and PhD student in algorithmics on the impacts of so-called "ethical by design" algorithms in artificial intelligence, he works with the [Medialab](https://medialab.sciencespo.fr)
 
 
-**[Timothée Gidoin](timothee.gidoin@sciencespo.fr)** has cofounded [Datagora](https://datagora.fr) an initiative that aims to democratize reliable sources and works in paralell for [Datactivist](https://datactivist.coop/fr/) as an Open Data consultant. [Twitter](https://twitter.com/tgidoin?lang=fr)
+**[Timothée Gidoin](timothee.gidoin@sciencespo.fr)** cofounded [Datagora](https://datagora.fr) an initiative that aims to democratize reliable sources. He works in paralell for [Datactivist](https://datactivist.coop/fr/) as an Open Data consultant. [Twitter](https://twitter.com/tgidoin?lang=fr)
 
 ]
 
@@ -117,7 +116,7 @@ resources
 quality of Medium blogpost
 
 ---
-## Let's get schwifty !
+## May the data be with you !
 
 .center[<img src="https://media.giphy.com/media/3o7aDgsiRMtIlrSZpu/giphy.gif" height="400"/>]
 
@@ -134,8 +133,66 @@ class: inverse, center, middle
 ---
 ## What are data ?
 
+> *Une donnée correspond à la représentation d'une information sous une forme conventionnelle destinée à faciliter son traitement*
 
+> *Data correspond to the representation of information in a .red[conventional form] intended to facilitate its processing*
 
+.center[<img src="./img/guidepratique.png" height="300"/>]
+
+.center[[CNIL & CADA's Open Data Practical Guide, *in French*](https://www.cnil.fr/sites/default/files/atoms/files/guide_open_data.pdf)]
+
+---
+Class:
+## Data-Information-Knowledge-Wisdom pyramid
+
+.pull-left[
+[![largeur](./img/DIKW_Pyramid.svg)](https://commons.wikimedia.org/w/index.php?curid=37705247)
+]
+
+.pull-right[Attributed to [Russell Ackoff](http://en.wikipedia.org/wiki/Russell_L._Ackoff), 1989
+
+Data may be :
+
+- Facts
+- signals
+- symbols]
+
+---
+
+# Vers une définition
+
+.pull-left[.reduite3[
+![](img/kitchin.jpg)
+
+⏺ enregistrabilité +🏗 briques de base ("*buildings blocks*")]]
+.pull-right[
+> *Data are commonly understood to be the raw material produced by **abstracting the world** into categories, measures and other representational forms – numbers, characters, symbols, images,sounds, electromagnetic waves, bits – that constitute the **building blocks** from which information and knowledge are created.*]
+
+---
+
+# Data or capta ?
+
+> Technically, what we understand as data are actually **capta** (derived from the Latin capere, meaning ‘to take’); those units of data that have been **selected and harvested** from the sum of all potential data.
+
+[Kitchin, 2014](https://books.google.fr/books?hl=fr&lr=&id=GfOICwAAQBAJ&oi=fnd&pg=PP1&dq=kitchin+data+revolution&ots=pcyfMTZh-V&sig=dQyPTL3AIN_4RdWvtBFw4VjdAa4#v=onepage&q=kitchin%20data%20revolution&f=false)
+
+.center[<img src="./img/robkitchin.jpg" height="250"/>] 
+
+---
+## Data are cool !
+
+> **US Air traffic on September 11th 2001**
+
+.center[<img src="https://i.imgur.com/X10kmms.gif" height="400"/>]
+
+---
+## Data are cool !
+
+> **"100 years of world cuisine"**
+
+.center[<img src="./img/datavizdeaths.png" height="400"/>]
+
+.footnote[[NKB Dataviz](https://owni.fr/2011/05/11/guerre-et-cuisine/index.html)]
 
 ---
 
