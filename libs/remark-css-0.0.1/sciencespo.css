@@ -11,7 +11,7 @@ a, a > code {
   position: absolute;
   bottom: 3em;
   padding-right: 4em;
-  font-size: 4px;
+  font-size: 75%;
 }
 .remark-code-line-highlighted     { background-color: #ffff88; }
 /* Couleur de fond et de la typo d'une slide séparatrice */
