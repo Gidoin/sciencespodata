@@ -19,7 +19,7 @@ output:
         </div>
 params:
   event: Data and Algorithms for Public Policy - Lesson 2 "Open Data, Myths and Reality"
-  slug: lesson2_opendata
+  slug: lesson2_opendata.html
 ---
 
 layout: true
@@ -159,7 +159,7 @@ Data may be :
 
 ---
 
-# Vers une définition
+## What are data ?
 
 .pull-left[.reduite3[
 ![](img/kitchin.jpg)
@@ -185,6 +185,8 @@ Data may be :
 
 .center[<img src="https://i.imgur.com/X10kmms.gif" height="400"/>]
 
+.footnote[[Source](https://www.reddit.com/r/Damnthatsinteresting/comments/d2gj7z/us_air_traffic_on_september_11_2001/)]
+
 ---
 ## Data are cool !
 
@@ -193,6 +195,36 @@ Data may be :
 .center[<img src="./img/datavizdeaths.png" height="400"/>]
 
 .footnote[[NKB Dataviz](https://owni.fr/2011/05/11/guerre-et-cuisine/index.html)]
+
+---
+## Data are cool !
+
+.center[<img src="./img/tricot.png" height="450"/>]
+
+.footnote[[Source](https://twitter.com/montgomerysue/status/1128093628738482177)]
+
+---
+## Data are cool !
+
+.center[<img src="./img/violenceandimmigration.png" height="400"/>]
+
+.footnote[[Source](https://www.themarshallproject.org/2018/03/30/the-myth-of-the-criminal-immigrant)]
+
+---
+Class:
+## Data are cool !
+
+.pull-left[<img src="./img/ainbnb1.png" height="250"/>
+
+Number of Airbnb appartments available in Paris
+]
+
+.pull-right[<img src="./img/airbnb2.png" height="250"/>
+Average price of Airbnb appartments in Paris
+]
+
+.footnote[[Source](https://www.sites.univ-rennes2.fr/mastersigat/B_Mericskay/WebGL.html)]
+
 
 ---
 
