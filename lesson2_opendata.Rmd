@@ -55,7 +55,7 @@ layout: true
 
 Slides : `r paste0("https://gidoin.github.io/sciencespodata/", params$slug)`
 
-Sources : `r paste0("https://github.com/Gidoin/sciencespodata/", params$slug)`
+Sources : `r paste0("https://github.com/Gidoin/sciencespodata/")`
 
 This production is freely reusable under the terms of the licence  [Creative Commons 4.0 BY-SA](https://creativecommons.org/licenses/by-sa/4.0/legalcode.fr).
 
