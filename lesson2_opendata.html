@@ -137,7 +137,7 @@ class: inverse, center, middle
 
 .center[&lt;img src="./img/guidepratique.png" height="300"/&gt;]
 
-.center[[CNIL &amp; CADA's Open Data Practical Guide, *in French*](https://www.cnil.fr/sites/default/files/atoms/files/guide_open_data.pdf)]
+.footnote[[CNIL &amp; CADA's Open Data Practical Guide, *in French*](https://www.cnil.fr/sites/default/files/atoms/files/guide_open_data.pdf)]
 
 ---
 Class:
@@ -218,10 +218,17 @@ Number of Airbnb appartments available in Paris
 ]
 
 .pull-right[&lt;img src="./img/airbnb2.png" height="250"/&gt;
+
 Average price of Airbnb appartments in Paris
 ]
 
 .footnote[[Source](https://www.sites.univ-rennes2.fr/mastersigat/B_Mericskay/WebGL.html)]
+
+
+---
+## Data are cool !
+
+&lt;iframe style="width: 80vw; height: 50vh; border: none;" src="https://query.wikidata.org/embed.html#%23defaultView%3AImageGrid%0ASELECT%20%3Fcocktail%20%3FcocktailLabel%20(SAMPLE(%3Frecipe)%20AS%20%3Frecipe)%20(SAMPLE(%3Fimage)%20AS%20%3Fimage)%0AWHERE%0A%7B%0A%20%20%7B%0A%20%20%20%20SELECT%20%3Fcocktail%20%3FcocktailLabel%20(GROUP_CONCAT(DISTINCT%20%3Fingredient%3B%20separator%3D%22%2C%20%22)%20AS%20%3FingredientsList)%20(GROUP_CONCAT(DISTINCT%20%3FgarnishLabel%3B%20separator%3D%22%2C%20%22)%20AS%20%3FgarnishList)%20(COUNT(DISTINCT%20%3Fingredient)%20%2B%20COUNT(DISTINCT%20%3FgarnishLabel)%20AS%20%3Fcount)%0A%20%20%20%20WHERE%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%3Fcocktail%20wdt%3AP31%2Fwdt%3AP279*%20wd%3AQ134768%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20p%3AP186%20%3FmaterialStat.%0A%20%20%20%20%20%20MINUS%20%7B%20%3FmaterialStat%20pq%3AP518%2Fwdt%3AP279*%20wd%3AQ2453629.%20%7D%0A%20%20%20%20%20%20MINUS%20%7B%20%3FmaterialStat%20ps%3AP186%20wd%3AQ488463%3B%20pq%3AP366%20wd%3AQ26876981.%20%7D%0A%20%20%20%20%20%20MINUS%20%7B%20%3FmaterialStat%20pq%3AP366%20wd%3AQ59541.%20%7D%0A%20%20%20%20%20%20%3FmaterialStat%20ps%3AP186%2Frdfs%3Alabel%20%3FmaterialLabel.%0A%20%20%20%20%20%20FILTER(LANG(%3FmaterialLabel)%20%3D%20%22en%22).%0A%20%20%20%20%20%20BIND(%3FmaterialLabel%20AS%20%3FingredientSolo).%0A%20%20%20%20%20%20OPTIONAL%20%7B%0A%20%20%20%20%20%20%20%20%3FmaterialStat%20ps%3AP186%2Frdfs%3Alabel%20%3FmaterialLabel%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20pq%3AP1114%20%3Fquantity.%0A%20%20%20%20%20%20%20%20FILTER(LANG(%3FmaterialLabel)%20%3D%20%22en%22).%0A%20%20%20%20%20%20%20%20BIND(CONCAT(STR(%3Fquantity)%2C%20%22%20%22%2C%20%3FmaterialLabel)%20AS%20%3FingredientWithQuantity).%0A%20%20%20%20%20%20%20%20OPTIONAL%20%7B%0A%20%20%20%20%20%20%20%20%20%20%3FmaterialStat%20pq%3AP1114%20%3Fquantity%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20ps%3AP186%2Frdfs%3Alabel%20%3FmaterialLabel%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20pqv%3AP1114%2Fwikibase%3AquantityUnit%20%3Funit.%0A%20%20%20%20%20%20%20%20%20%20FILTER(LANG(%3FmaterialLabel)%20%3D%20%22en%22).%0A%20%20%20%20%20%20%20%20%20%20FILTER(%3Funit%20!%3D%20wd%3AQ199).%0A%20%20%20%20%20%20%20%20%20%20%3Funit%20rdfs%3Alabel%20%3FunitLabel.%0A%20%20%20%20%20%20%20%20%20%20FILTER(LANG(%3FunitLabel)%20%3D%20%22en%22).%0A%20%20%20%20%20%20%20%20%20%20BIND(CONCAT(STR(%3Fquantity)%2C%20%22%20%22%2C%20IF(%3Fquantity%20%3D%201%2C%20%3FunitLabel%2C%20CONCAT(%3FunitLabel%2C%20IF(STRENDS(%3FunitLabel%2C%20%22sh%22)%2C%20%22es%22%2C%20%22s%22)))%2C%20%22%20%22%2C%20%3FmaterialLabel)%20AS%20%3FingredientWithUnit).%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20BIND(COALESCE(%3FingredientWithUnit%2C%20%3FingredientWithQuantity%2C%20%3FingredientSolo)%20AS%20%3Fingredient).%0A%20%20%20%20%20%20OPTIONAL%20%7B%0A%20%20%20%20%20%20%20%20%3Fcocktail%20p%3AP186%20%5B%20ps%3AP186%20%3Fgarnish%3B%20pq%3AP366%20wd%3AQ59541%20%5D.%0A%20%20%20%20%20%20%20%20%3Fgarnish%20rdfs%3Alabel%20%3FgarnishLabel.%0A%20%20%20%20%20%20%20%20FILTER(LANG(%3FgarnishLabel)%20%3D%20%22en%22).%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%3Fcocktail%20rdfs%3Alabel%20%3FcocktailLabel.%0A%20%20%20%20%20%20FILTER(LANG(%3FcocktailLabel)%20%3D%20%22en%22).%0A%20%20%20%20%7D%0A%20%20%20%20GROUP%20BY%20%3Fcocktail%20%3FcocktailLabel%0A%20%20%7D%0A%20%20BIND(%0A%20%20%20%20IF(REGEX(%3FingredientsList%2C%20%22%2C%20.*%2C%22)%2C%0A%20%20%20%20%20%20%20REPLACE(%3FingredientsList%2C%20%22(.*)%2C%20(.*)%22%2C%20%22%241%2C%20and%20%242%22)%2C%0A%20%20%20%20%20%20%20REPLACE(%3FingredientsList%2C%20%22(.*)%2C%20(.*)%22%2C%20%22%241%20and%20%242%22))%0A%20%20%20%20AS%20%3Fingredients).%0A%20%20BIND(%0A%20%20%20%20IF(REGEX(%3FgarnishList%2C%20%22%2C%20.*%2C%22)%2C%0A%20%20%20%20%20%20%20REPLACE(%3FgarnishList%2C%20%22(.*)%2C%20(.*)%22%2C%20%22%241%2C%20and%20%242%22)%2C%0A%20%20%20%20%20%20%20REPLACE(%3FgarnishList%2C%20%22(.*)%2C%20(.*)%22%2C%20%22%241%20and%20%242%22))%0A%20%20%20%20AS%20%3Fgarnishes).%0A%20%20OPTIONAL%20%7B%0A%20%20%20%20%3Fcocktail%20p%3AP186%20%5B%20ps%3AP186%20%3Fglass%3B%20pq%3AP518%2Fwdt%3AP279*%20wd%3AQ2453629%20%5D.%0A%20%20%20%20%3Fglass%20rdfs%3Alabel%20%3FglassLabel.%0A%20%20%20%20FILTER(LANG(%3FglassLabel)%20%3D%20%22en%22).%0A%20%20%20%20BIND(IF(REGEX(%3FglassLabel%2C%20%22%5E%5BAEIOUaeiou%5D%22)%2C%20%22an%22%2C%20%22a%22)%20AS%20%3Farticle).%0A%20%20%20%20BIND(CONCAT(%22%20in%20%22%2C%20%3Farticle%2C%20%22%20%22%2C%20%3FglassLabel)%20AS%20%3Fcontainer).%0A%20%20%20%20BIND(%22%2C%20served%22%20AS%20%3Fserved).%0A%20%20%7D%0A%20%20OPTIONAL%20%7B%0A%20%20%20%20%3Fcocktail%20p%3AP186%20%5B%20ps%3AP186%20wd%3AQ488463%3B%20pq%3AP366%20wd%3AQ26876981%20%5D.%0A%20%20%20%20BIND(%22%20on%20the%20rocks%22%20AS%20%3FonTheRocks).%0A%20%20%20%20BIND(%22%2C%20served%22%20AS%20%3Fserved).%0A%20%20%7D%0A%20%20OPTIONAL%20%7B%0A%20%20%20%20FILTER(STRLEN(STR(%3Fgarnishes))%20%3E%201).%0A%20%20%20%20BIND(CONCAT(%22%20with%20%22%2C%20%3Fgarnishes)%20AS%20%3Fgarnish).%0A%20%20%20%20BIND(%22%2C%20served%22%20AS%20%3Fserved).%0A%20%20%7D%0A%20%20BIND(CONCAT(%0A%20%20%20%20%3Fingredients%2C%0A%20%20%20%20COALESCE(%3Fserved%2C%20%22%22)%2C%0A%20%20%20%20COALESCE(%3FonTheRocks%2C%20%22%22)%2C%0A%20%20%20%20COALESCE(%3Fgarnish%2C%20%22%22)%2C%0A%20%20%20%20COALESCE(%3Fcontainer%2C%20%22%22))%0A%20%20%20%20AS%20%3Frecipe).%0A%20%20OPTIONAL%20%7B%20%3Fcocktail%20wdt%3AP18%20%3Fimage.%20%7D%0A%7D%0AGROUP%20BY%20%3Fcocktail%20%3FcocktailLabel%0AORDER%20BY%20DESC(MAX(%3Fcount))" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups"&gt;&lt;/iframe&gt;
 
 
 ---
@@ -234,7 +241,108 @@ class: inverse, center, middle
 
 .center[&lt;img src="./img/rawdatanow.png" height="400" /&gt;]
 
-[Start the ted talk at 09:00](https://www.ted.com/talks/tim_berners_lee_on_the_next_web#t-535280)
+[Start the Ted talk at 09:00](https://www.ted.com/talks/tim_berners_lee_on_the_next_web#t-535280)
+
+---
+## Open data : definition
+
+According to Wikipedia, open data is :
+&gt; Open data is the idea that some data should be freely available to everyone to use and republish as they wish. One of the most important forms of open data is open government data (OGD), which is a form of open data created by ruling institutions.
+
+**Open data is both a idealogical movement and a practical way of publishing data freely available and usable**
+
+According to [French Government](https://www.gouvernement.fr/action/l-ouverture-des-donnees-publiques) :
+
+&gt; Open data deals with the effort that public organisms do in order to share the data that they own. This opening has to be done **for free, in public format and allow reuse of data**
+
+French law considers that data produced/owned by public administrations/local authorities have to be made available to everyone.
+--
+**This doesn't include private/individual informations or data that may harm the national security**
+
+---
+class: 
+## Why open data ?
+
+.center[&lt;img src="https://media.giphy.com/media/vzvFGQs0P013i/giphy.gif" height="250" /&gt;]
+
+--
+
+- **Innovation**
+
+- **Modernisation**
+
+- **Transparency** 
+
+- **Economic opportunities**
+
+---
+## Open Data benefits : Innovation
+
+- L’ouverture des donnée, moyen de valoriser le travail de l’administration
+
+- L’ouverture des données, moyen de servir l’intérêt général
+
+- L’ouverture des données, moyen de gagner du temps (et de l’argent)
+
+- L’ouverture des données, moyen d’enrichir le travail de l’administration
+
+&gt; 80% des téléchargements sur le portail open data provenaient des services de la ville
+
+Paris 2013 Report 
+
+---
+## Open Data benefits : Modernisation
+
+- L’open data, levier de qualité des données
+  - Au niveau des SI, ouvrir des données peut permettre d’améliorer leur qualité
+  - Découvertes d’erreurs, de coquilles, d’approximations pas détectées en interne
+Ex : emplacement des arrêts de bus à Rennes
+
+- L’open data, opportunité pour trouver de nouvelles données
+  - Phase d’identification des données en amont de l’ouverture
+  - Cartographie du système d’information permet d’identifier de nouveaux fichiers
+  - Détecter des données stratégiques qui sont gérées en dehors du SI
+
+- L’open data, révélateur d’enjeux liés à la souveraineté du SI
+  - Phase d’ouverture des données
+  - Les agents se heurtent à des SI qui n’ont pas été prévus pour l’ouverture
+(export/Négocier avec des prestataires des prestations spécifiques
+
+---
+## Open Data benefits : Transparency
+
+See slides on Open Government
+
+---
+## Open Data benefits : Economic perspective
+
+&gt; Between 2016 and 2020, the size of the open data market is expected to increase by
+36.9%, to reach a value of 75.7 billion euros in 2020
+
+EU Commission Report « Creating Value through Open Data » Nov 2015
+
+.center[&lt;img src="./img./arketsize.png" height="200" /&gt;]
+
+---
+## Open data : key milestones
+
+![](img/chrono.png)
+
+---
+
+## 7th December 2007 : Sebastopol meeting 
+
+.pull-left[
+👥 **What ?** : A meeting of the Open Government Group in Sebastopol (California), headquarters of O'Reilly editions
+
+🎯 **Why ?** : Influence the future president of the US to boost and implement Open Data
+
+📜 **How ?** : By adopting a declaration that define the key principles of Open Government Data
+
+]
+.pull-right[
+![](img/photofamille.jpg)
+]
 
 ---
 class: middle, center
@@ -347,7 +455,7 @@ class: inverse, center, middle
 
 ## What does Opengov mean ?
 
-.center[&lt;img src="https://media.giphy.com/media/LrGHJGtTbT7PO/giphy.gif" height="400"/&gt;]
+.center[&lt;img src="https://media.giphy.com/media/IbUUbU4xUDJWcgGMGP/giphy.gif" height="400"/&gt;]
 
 ---
 
@@ -491,6 +599,62 @@ class:center, middle, inverse
 ## Coffee break : 5 minutes
 
 ---
+
+## Datagora
+
+[Datagora](https://datagora.fr) is a French initiative that aims to gather different type of official reliable sources in one non-profit making platform called Datagora.
+We have many statistical institutes (such as OECD, Insee...) that currently feed our platform with their recent publications (in French).
+
+.center[&lt;img src="./img/datagora1.png" height = "350" /&gt;]
+
+---
+
+## Datagora
+
+To make the web platform sustainable we have recently developed a media activity which valorizes studies, statistics or reports with social media contents such as infographics or short videos. Example :
+.center[[&lt;img src="./img/datagora2.png" height = "400"s /&gt;](https://twitter.com/RSF_inter/status/1124213498756595713)]
+
+---
+class:inverse, middle, center
+
+# Open Data platforms
+
+---
+
+class:inverse, middle, center
+## Have you already looked for open data ?
+
+---
+## Data.gouv.fr ?
+
+.red[Data.gouv.fr] is the national platform for French public data.
+It was designed and inaugurated in 2011, by the **Etalab** mission, and then refreshed in 2013.
+.center[&lt;img src="./img/datagouvfr.png" height="250"/&gt;] 
+
+There are thousands of datasets (but not only) coming from different type of public data producers such as Ministries, independent agencies, statistical institutes, local authorities but also third parties producers such as OpenStreetMap or OpenFoodFacts
+
+---
+## Beyond national OD platform
+
+Data.gouv Portal is French **national** Open data platform but it's not the only website that publishes available public datasets. Do you know others ?
+
+--
+
++ There are also OD platforms led by **local authorities** at different levels. For instance, [Paris Data](https://opendata.paris.fr/explore/?sort=modified), [la Région Occitanie](https://data.laregion.fr/pages/accueil/), [l'agglomération de Saint-Malo](https://data.stmalo-agglomeration.fr/page/accueil/)...
+
+--
+
++ Open Data platforms led by **ministries**. Example : [data.education.gouv.fr](https://data.education.gouv.fr/pages/accueil/)
+
+--
+
++ Open Data plaftorms led by **private organizations**. Example [DataNova](https://datanova.laposte.fr/page/accueil/) (La Poste)
+
+--
+
++ Datasets directly published in data provider website, without dedicated platform. Example : Insee
+
+---
 class:inverse, middle, center
 # Open Data in the real life
 
@@ -567,6 +731,14 @@ In the exemple next slide, [l'enquête Etic du Ministère de l'éducation nation
 .center[&lt;img src="https://media.giphy.com/media/l4HodBpDmoMA5p9bG/giphy.gif" height="400"/&gt;]
 
 ---
+
+## Challenge 1 : data findability
+
+.center[&lt;img src="./img/googledataset.png" height="350"/&gt;]
+
+Read [Simon Chignard's article](https://donneesouvertes.info/2018/09/17/jai-teste-google-dataset-search-le-moteur-de-recherche-open-data/) on Google Dataset Search
+
+---
 ## Challenge 2 : data quality
 
 
@@ -616,6 +788,43 @@ Or hardly exploitable...²
 
 
 .footnote[[Source](https://medium.com/datactivist/qui-a-ouvert-quoi-le-recensement-des-donn%C3%A9es-des-villes-est-maintenant-ouvert-b7f697135c1f)]
+
+---
+## Challenge 2 : data quality
+
+.center[&lt;img src="./img/openrefine.png" height="400"/&gt;] 
+
+[Download Open Refine (+ tutorials)](http://openrefine.org/)
+
+---
+## Challenge 2 : data quality
+
+.center[&lt;img src="./img/csvgenerator.png" height="400"/&gt;] 
+
+[Have a look to CSV GG (an Etalab initiative)](https://csv-gg.etalab.studio/)
+
+---
+## Tidy data
+
+.center[&lt;img src="./img/hadley.jpg" height="250"/&gt;] 
+
+--
+
+[_tidy data_ Paradigm](http://vita.had.co.nz/papers/tidy-data.pdf) (Hadley Wickham)
+
+&gt; “All happy families are alike, but every unhappy family is unhappy in its own way” – Leon Tolstoï 
+
+&gt; “Tidy datasets are all alike, but every messy dataset is messy in its own way.” – Hadley Wickham
+
+---
+## Tidy data
+
+[*Tidy data principles*](https://garrettgman.github.io/tidying/) ("données ordonnées")**
+- Each variable in the data set is placed in its own column
+- Each observation is placed in its own row
+- Each value is placed in its own cell*
+
+.center[&lt;img src="./img/tidydata.png" height="200"/&gt;] 
 
 ---
 ## See you in two weeks !
