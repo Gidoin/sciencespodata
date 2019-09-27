@@ -15,7 +15,7 @@ class: center, middle, inverse, title-slide
 # Workshop : manipulating data 1/2
 ## Data and Algorithms for Public Policy
 ### Timothée Gidoin
-### Sciences Po, 2019-09-26
+### Sciences Po, 2019-09-27
 
 ---
 
@@ -44,7 +44,7 @@ layout: true
 &lt;/style&gt;
 
 
-&lt;div class='my-footer'&gt;&lt;span&gt;Data and Algorithms for Public Policy - Lesson 4 "Open Data, Myths and Reality"&lt;/span&gt; &lt;center&gt;&lt;div class=logo&gt;&lt;img src='https://newsroom.sciencespo.fr/wp-content/uploads/2017/11/827693-297x109.png' width='100px'&gt;&lt;/center&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div class='my-footer'&gt;&lt;span&gt;Data and Algorithms for Public Policy - Lesson 4 "Workshop 1 - manipulating data"&lt;/span&gt; &lt;center&gt;&lt;div class=logo&gt;&lt;img src='https://newsroom.sciencespo.fr/wp-content/uploads/2017/11/827693-297x109.png' width='100px'&gt;&lt;/center&gt;&lt;/span&gt;&lt;/div&gt;
 
 ---
 ## Before we start
@@ -324,7 +324,6 @@ Function *somme.si.ens* / *sumifs*
 
 .red[60 176]
 
---
 
 ---
 ## Data manipulation through spreadsheet : functions
@@ -347,10 +346,6 @@ Function *nb.si.ens* / *count.ifs*
 
 .red[17]
 
----
-class:center, middle, inverse
-## Coffee break : 5 minutes \o/
-
 
 ---
 ## Data manipulation through spreadsheet : Vlookup
@@ -371,61 +366,6 @@ class:center, middle, inverse
 ## Data manipulation through spreadsheet : Vlookup
 
 .center[&lt;img src="https://media.giphy.com/media/KHfidaIqN0Sqc/giphy.gif" height="350"/&gt;]
-
----
-## Data manipulation through spreadsheet : Vlookup
-
-- Interesting, but not sufficient to compare the ISF paid per inhabitants, why ?
-
---
-
-- Now you want to create a new column with only the number of adult inhabitants (&gt;= 18) per city
-
---
-
-- Now you can get the ratio of number of adult inhabitants that were ISF licence payers 
-
-+ What are the cities with the highest proportion of adult ISF payers ?
-
-+ How many cities of more than 20 000 inhabitant don't have at least 50 ISF payers ?
-
-+ What is the biggest French city that don't have at least 50 ISF payers ?
-Quelle est la plus grande ville française qui n'a pas au moins 50 redevables ISF ?
-
----
-## Data manipulation through spreadsheet : pivot table
-
-- Open a new tab
-
-- Insert a *pivot table* / *tableau croisé dynamique* based on the scope of the data where you have all your previous columns
-
-- Insert in your pivot each variable and split them this way :
-+ Filters : Pop+20y / Cities / Departments / Pop
-+ Lines : Region
-+ Value : Sum of number of ISF taxpayers / Average Property / Average ISF paid / % of adult ISF taxpayer
-
-- Filter by removing Guyane, Guadeloupe, Réunion, Martinique
-
----
-## Data manipulation through spreadsheet : pivot table
-
-You should get the following pivot table :
-
-.center[&lt;img src="./img/tcd.png" height="350" /&gt;]
-
----
-## Data manipulation through spreadsheet : pivot table
-
-And the following pivot graph :
-
-.center[&lt;img src="./img/gcd.png" height="350" /&gt;]
-
----
-## Data manipulation through spreadsheet : pivot table
-
-You can create as many graphs as you want, so amazing !
-
-.center[&lt;img src="./img/gcd2.png" height="350" /&gt;]
 
 ---
 ## See you next week !

@@ -2,7 +2,7 @@
 title: "Open Data, Myths and Reality"
 subtitle: "Data and Algorithms for Public Policy"
 author: "Timothée Gidoin"
-date: "SciencesPo, `r Sys.Date()`"
+date: "Sciences Po, `r Sys.Date()`"
 output:
   SlidesDatactivist::moon_reader:
     css: [default, sciencespo, sciencespo-fonts]
