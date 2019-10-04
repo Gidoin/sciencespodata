@@ -97,14 +97,14 @@ class: inverse, center, middle
 
 **Instructions** :
   
-- Find an interesting dataset opened by govt or local authorities or public companies (not necessary a French one) topic : fiscality, budget, R&D...
+- Find an interesting dataset opened by govt or local authorities or public companies (not necessary a French one). Topics : fiscality, education, R&D...
 - Analyze the data through pivot table or some functions we covered 
 - Cross the data with another open dataset to enrich them and strenghten your analysis (vlookup / index.match). 
 - Analyze your results and produce a graph or a map (Khartis) displaying the key results
 - .red[Bonus] : provide a real policy recommandation based on your results (if relevant)
 - Explain the limits of the data you worked with (quality, scope, granularity..) and the data you would have needed to improve your work
   
-You will write a 2-pages (graph/map included) note for your Head of cabinet with the main result you got by analysing this data, a draft of a public policy based on this data (it doesn't need to be original, just consistent), the limits of your analysis and data needed to strenghten it. **Send attached the CSV/XLS files you worked with**
+You will write a 2-pages (graph/map included) note, **.red[1]** page of annex **MAX** allowed, for your Head of cabinet with the main result you got by analysing this data, a draft of a public policy based on this data (it doesn't need to be original, just consistent), the limits of your analysis and data needed to strenghten it. **Send attached the CSV/XLS files you worked with**
 
 ---
 ## Before we start: reminder
@@ -147,7 +147,7 @@ class: inverse, center, middle
 
 - ISF data are interesting but there is one key variable missing...
 
--- 
+--
 
 **population** !
 
@@ -255,9 +255,29 @@ class:center, middle, inverse
 
 - Missing Migrants project, led par the IOM, UN agency, records every known incidents that imply migrants that are missing or that died through their migration
 
-- IOM **agregates in one public database different sources of information** (fishermen, NGOs, media, coast-keepers...) and add a "source quality" note to assess the reliability of the source
+- IOM **agregates in one public database different sources of information** (fishermen, NGOs, media, coastguards...) and add a "source quality" note to assess the reliability of the source
 
-- This work of census by an international organisation allow to give credit to the statistics collected and to shed the light on this issue. This is a way to **raise awareness among the public opinon and to make it political**. Collecting data is often necessary to quantify an issue if we want it to be taken into account in the public debate
+- This work of census by an international organisation allows to give credit to the statistics collected and to shed the light on this issue. This is a way to **raise awareness among the public opinon and to make it political**. Collecting data is often necessary to quantify an issue if we want it to be taken into account in the public debate
+
+- Illegal imigration is not the only topic where it doesn't exist any official statistics. See "**missing number projects**" for more examples (homeless persons, number of suicides in some professions...).
+
+.footnote[[*Missing Migrants Projects*](https://missingmigrants.iom.int/)]
+
+---
+## Missing Migrants Project
+
+> Être ignoré de la statistique, c’est être exclu de la cité, de la citoyenneté // Being ignored by statistics means being excluded by the society, by the citizenship
+
+Maryse Marpsat, statistician and sociologist (INED)
+
+**Not collecting data, is a very political decision**
+
+> EU state members document thoroughly the situation of their own population and the entrance in their territory of foreign citizens but, in their own statistical process, they don't care about people died by tempting to cross their borders. **By ometting to count those deaths, they condemn them to invisibility.**
+
+Antoine Pécoud, sociologist
+
+But is OIM, by counting missing migrants, such a do-gooder ? Some experts consider that, in fact, this work supports government.. 
+[A French research article on the topic](https://www.cairn.info/revue-europeenne-des-migrations-internationales-2017-2-page-63.htm#)
 
 ---
 ## Missing Migrants Project
